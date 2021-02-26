@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('') no-repeat center center fixed;
+    background: url('/media/landing-page1.jpeg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -76,5 +76,33 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 50%;
+        height: 100%;
+        background: white;
+    }
+
+    .navbar-collapse.collapsing {
+        left: -75%;
+        transition: height 0s ease;
+    }
+
+    .navbar-collapse.show {
+        left: 0;
+        transition: left 300ms ease-in-out;
+    }
+
+    .navbar-toggler.collapsed ~ .navbar-collapse {
+        transition: left 500ms ease-in-out;
     }
 }
